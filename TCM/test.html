@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>体质测评 - 青禾养生</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <img src="images/logo.png" alt="青禾养生" class="logo-image">
+        </div>
+        <span class="logo-text">青禾养生</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="test.html" class="active">体质测评</a></li>
+        <li><a href="season-recipe.html">四时膳方</a></li>
+        <li><a href="material.html">本草图鉴</a></li>
+        <li><a href="class.html">中医养生</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2 class="section-title">五行体质测评</h2>
+      <p class="desc-text" style="margin-bottom: 10px;">趣味版五行体质测评，共10题，选择最符合你的选项。</p>
+      <p style="text-align: center; color: #888; margin-bottom: 30px; font-size: 0.85rem;">请根据真实情况选择，每题仅选一项，结果仅供参考，不替代医疗诊断。</p>
+      <p style="text-align: center; color: #888; margin-bottom: 30px; font-size: 0.9rem;">选项说明：A=木 &nbsp;&nbsp; B=火 &nbsp;&nbsp; C=土 &nbsp;&nbsp; D=金 &nbsp;&nbsp; E=水</p>
+      
+      <div id="test-container" class="test-section">
+        <div id="progress-text" class="progress-text">已完成 0 / 10</div>
+        <div class="progress-bar vine-style">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+        
+        <div class="question-card">
+          <div class="question-title">1. 假如周末自由安排，你更偏向哪种出行模式？</div>
+          <div class="options">
+            <button class="option-btn" onclick="selectOption(0, 0)">A. 郊外徒步爬山，舒展身体拥抱绿植</button>
+            <button class="option-btn" onclick="selectOption(0, 1)">B. 逛市集游乐园，热闹好玩的活动优先</button>
+            <button class="option-btn" onclick="selectOption(0, 2)">C. 公园野餐露营，悠闲坐着吃东西聊天</button>
+            <button class="option-btn" onclick="selectOption(0, 3)">D. 美术馆/书店安静打卡，独处氛围感出行</button>
+            <button class="option-btn" onclick="selectOption(0, 4)">E. 温泉泡澡汗蒸，静养放松为主</button>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <div class="question-title">2. 被朋友放鸽子后，你的第一反应是？</div>
+          <div class="options">
+            <button class="option-btn" onclick="selectOption(1, 0)">A. 越想越生气，忍不住反复纠结吐槽</button>
+            <button class="option-btn" onclick="selectOption(1, 1)">B. 当场直接表达不满，情绪来得快消散也快</button>
+            <button class="option-btn" onclick="selectOption(1, 2)">C. 默默理解对方，还会下意识替对方找理由</button>
+            <button class="option-btn" onclick="selectOption(1, 3)">D. 表面平静，心里暗自疏远，很难再信任</button>
+            <button class="option-btn" onclick="selectOption(1, 4)">E. 内心胡思乱想，担心是不是自己哪里出了问题</button>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <div class="question-title">3. 换季的时候，你身体最容易中招的问题是？</div>
+          <div class="options">
+            <button class="option-btn" onclick="selectOption(2, 0)">A. 春天容易烦躁上火、眼睛干涩、胸口闷胀</button>
+            <button class="option-btn" onclick="selectOption(2, 1)">B. 夏天心烦失眠、口腔溃疡、动不动燥热出汗</button>
+            <button class="option-btn" onclick="selectOption(2, 2)">C. 梅雨季浑身沉重、肚子胀、拉肚子没胃口</button>
+            <button class="option-btn" onclick="selectOption(2, 3)">D. 秋天嗓子干痒、干咳、皮肤起皮干燥</button>
+            <button class="option-btn" onclick="selectOption(2, 4)">E. 冬天手脚冰凉、腰酸乏力、夜里频繁起夜</button>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <div class="question-title">4. 追剧时，你最容易代入下面哪类主角人设？</div>
+          <div class="options">
+            <button class="option-btn" onclick="selectOption(3, 0)">A. 潇洒不羁、爱恨分明、一身傲骨的侠客型</button>
+            <button class="option-btn" onclick="selectOption(3, 1)">B. 热情阳光、直来直去、永远热血冲动的少年型</button>
+            <button class="option-btn" onclick="selectOption(3, 2)">C. 温柔顾家、稳重可靠、所有人的情绪调解员</button>
+            <button class="option-btn" onclick="selectOption(3, 3)">D. 清冷理智、心思细腻、外冷内热的冷静派</button>
+            <button class="option-btn" onclick="selectOption(3, 4)">E. 沉稳隐忍、心思缜密、深藏不露的城府型</button>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <div class="question-title">5. 晚上躺在床上，你的入睡状态更接近？</div>
+          <div class="options">
+            <button class="option-btn" onclick="selectOption(4, 0)">A. 脑子里思绪乱飞，越想睡越清醒</button>
+            <button class="option-btn" onclick="selectOption(4, 1)">B. 浑身燥热翻来覆去，心静不下来</button>
+            <button class="option-btn" onclick="selectOption(4, 2)">C. 吃完晚饭昏昏沉沉，躺下很快就能犯困</button>
+            <button class="option-btn" onclick="selectOption(4, 3)">D. 喉咙干痒干咳，反反复复影响入睡</button>
+            <button class="option-btn" onclick="selectOption(4, 4)">E. 手脚冰凉捂不热，需要很久才能睡着</button>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <div class="question-title">6. 奶茶饮品点单时，你的固定偏好是？</div>
+          <div class="options">
+            <button class="option-btn" onclick="selectOption(5, 0)">A. 青梅、柠檬等酸味果茶</button>
+            <button class="option-btn" onclick="selectOption(5, 1)">B. 红茶、苦味咖啡、凉茶类</button>
+            <button class="option-btn" onclick="selectOption(5, 2)">C. 芋泥、奶茶、甜品这类甜口饮品</button>
+            <button class="option-btn" onclick="selectOption(5, 3)">D. 清爽辛香的花茶、润肺梨汤</button>
+            <button class="option-btn" onclick="selectOption(5, 4)">E. 黑芝麻、黑糖、温补养生类热饮</button>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <div class="question-title">7. 天生口味偏爱哪一类味道？</div>
+          <div class="options">
+            <button class="option-btn" onclick="selectOption(6, 0)">A. 酸味</button>
+            <button class="option-btn" onclick="selectOption(6, 1)">B. 苦味</button>
+            <button class="option-btn" onclick="selectOption(6, 2)">C. 甘甜味</button>
+            <button class="option-btn" onclick="selectOption(6, 3)">D. 辛香辛辣味</button>
+            <button class="option-btn" onclick="selectOption(6, 4)">E. 咸鲜味</button>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <div class="question-title">8. 运动过后你的出汗状态是？</div>
+          <div class="options">
+            <button class="option-btn" onclick="selectOption(7, 0)">A. 紧张或者运动后，腋下、肋骨附近出汗最多</button>
+            <button class="option-btn" onclick="selectOption(7, 1)">B. 稍微一动就满头大汗，浑身汗液旺盛</button>
+            <button class="option-btn" onclick="selectOption(7, 2)">C. 出汗黏腻发黄，出汗之后身体更加疲惫沉重</button>
+            <button class="option-btn" onclick="selectOption(7, 3)">D. 几乎很少出汗，皮肤常年偏干</button>
+            <button class="option-btn" onclick="selectOption(7, 4)">E. 只有手脚会出冷汗，身上很少出汗</button>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <div class="question-title">9. 美食面前，你的肠胃属于哪种类型？</div>
+          <div class="options">
+            <button class="option-btn" onclick="selectOption(8, 0)">A. 生气郁闷之后立刻便秘、肚子胀气</button>
+            <button class="option-btn" onclick="selectOption(8, 1)">B. 爱吃辣就上火，大便经常干结不通</button>
+            <button class="option-btn" onclick="selectOption(8, 2)">C. 稍微吃一点生冷油腻，就拉肚子大便稀软</button>
+            <button class="option-btn" onclick="selectOption(8, 3)">D. 气候干燥就便秘，排便十分干涩</button>
+            <button class="option-btn" onclick="selectOption(8, 4)">E. 小便清长次数多，大便常年不成形</button>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <div class="question-title">10. 素颜状态下，你的肤色更接近？</div>
+          <div class="options">
+            <button class="option-btn" onclick="selectOption(9, 0)">A. 面色青白，容易因为生气脸色发青</button>
+            <button class="option-btn" onclick="selectOption(9, 1)">B. 面色偏红，很容易脸红、爆痘泛红</button>
+            <button class="option-btn" onclick="selectOption(9, 2)">C. 面色发黄暗沉，看着总没有气色</button>
+            <button class="option-btn" onclick="selectOption(9, 3)">D. 肤色偏白干燥，缺少血色</button>
+            <button class="option-btn" onclick="selectOption(9, 4)">E. 面色暗沉偏黑，没有光泽</button>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+          <button id="prev-btn" class="btn btn-secondary" onclick="goToQuestion(currentQuestionIndex - 1)" style="display: none;">
+            <i class="fas fa-arrow-left"></i> 上一题
+          </button>
+        </div>
+      </div>
+
+      <div id="result-container" style="display: none;" class="test-section"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">首页</a>
+        <a href="test.html">体质测评</a>
+        <a href="season-recipe.html">四时膳方</a>
+        <a href="material.html">本草图鉴</a>
+        <a href="class.html">中医养生</a>
+      </div>
+      <p class="footer-copyright">© 2026 青禾养生. 传承中医智慧，呵护健康生活</p>
+    </div>
+  </footer>
+
+  <script src="js/recipe.js"></script>
+  <script src="js/test.js"></script>
+  <script src="js/animation.js"></script>
+</body>
+</html>

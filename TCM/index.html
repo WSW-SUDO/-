@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>青禾养生 - 新中式轻养生</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <img src="images/logo.png" alt="青禾养生" class="logo-image">
+        </div>
+        <span class="logo-text">青禾养生</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">首页</a></li>
+        <li><a href="test.html">体质测评</a></li>
+        <li><a href="season-recipe.html">四时膳方</a></li>
+        <li><a href="material.html">本草图鉴</a></li>
+        <li><a href="class.html">中医养生</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <section class="parallax-banner" id="parallax-banner">
+    <div class="parallax-image-container" id="parallax-image-container">
+      <img src="images/banner-parallax.jpg" alt="中药养生" class="parallax-image" id="parallax-image">
+    </div>
+    <div class="parallax-overlay">
+      <h1 class="parallax-title">食养有方 · 因质因时</h1>
+      <p class="parallax-subtitle">药膳养生专题站</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <h1 class="hero-title">青禾养生</h1>
+        <p class="slogan">食养有方 · 因质因时</p>
+        <p class="hero-subtitle">传承中医智慧，融合现代生活，让养生融入日常。根据您的体质和季节，为您推荐专属养生方案。</p>
+        
+        <div class="entry-grid">
+          <div class="entry-card" onclick="location.href='test.html'" style="background-image: url('images/Camera_XHS_17811757260801040g2sg31pv212bpn0e05pmghqenc2sh6irppf8_edit_866846368658354.jpg');">
+            <div class="entry-overlay">
+              <div class="entry-title">体质测评</div>
+              <div class="entry-desc">了解您的体质类型</div>
+            </div>
+          </div>
+          <div class="entry-card" onclick="location.href='season-recipe.html'" style="background-image: url('images/Camera_XHS_17811754920911040g2sg31fma528v7qb041unb9153vtq717rdg8_edit_866858013569290.jpg');">
+            <div class="entry-overlay">
+              <div class="entry-title">四时膳方</div>
+              <div class="entry-desc">四季养生食谱</div>
+            </div>
+          </div>
+          <div class="entry-card" onclick="location.href='material.html'" style="background-image: url('images/Camera_XHS_17811757091311040g2sg31obcnnpkks005q172gt39b5guaqadi8_edit_866853684655749.jpg');">
+            <div class="entry-overlay">
+              <div class="entry-title">本草图鉴</div>
+              <div class="entry-desc">药食同源食材</div>
+            </div>
+          </div>
+          <div class="entry-card" onclick="location.href='class.html'" style="background-image: url('images/Screenshot_20260611_193549_com.xingin.xhs\(2\).png');">
+            <div class="entry-overlay">
+              <div class="entry-title">中医养生</div>
+              <div class="entry-desc">养生知识科普</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 五行体质罗盘入口 -->
+    <section class="compass-section">
+      <div class="container">
+        <div class="compass-main">
+          <div class="compass-text">
+            <h3 class="compass-title">五行体质 · 辨明本源</h3>
+            <p class="compass-paragraph">夫天地五行，木火土金水，化生万物。</p>
+            <p class="compass-paragraph">人禀五行之气而生，各有偏盛，体质各异。</p>
+            <p class="compass-paragraph">转动罗盘，辨你属木火土金水之何类，</p>
+            <p class="compass-paragraph">知其宜忌，调其饮食，养其情志，</p>
+            <p class="compass-paragraph">方能顺时而为，调养有道。</p>
+          </div>
+          <div class="compass-wrapper">
+            <div class="compass" id="compass" onclick="spinCompass()">
+              <div class="compass-outer">
+                <div class="compass-directions">
+                  <div class="direction-group" style="top: 10%; left: 50%; transform: translate(-50%, -50%);">
+                    <span class="direction">木</span>
+                    <span class="direction-label">春 / 肝</span>
+                  </div>
+                  <div class="direction-group" style="top: 28%; left: 86%; transform: translate(-50%, -50%);">
+                    <span class="direction">火</span>
+                    <span class="direction-label">夏 / 心</span>
+                  </div>
+                  <div class="direction-group" style="top: 76%; left: 71%; transform: translate(-50%, -50%);">
+                    <span class="direction">土</span>
+                    <span class="direction-label">长夏 / 脾</span>
+                  </div>
+                  <div class="direction-group" style="top: 76%; left: 29%; transform: translate(-50%, -50%);">
+                    <span class="direction">金</span>
+                    <span class="direction-label">秋 / 肺</span>
+                  </div>
+                  <div class="direction-group" style="top: 28%; left: 14%; transform: translate(-50%, -50%);">
+                    <span class="direction">水</span>
+                    <span class="direction-label">冬 / 肾</span>
+                  </div>
+                </div>
+                <div class="compass-inner">
+                  <div class="yin-yang"></div>
+                </div>
+                <div class="compass-pointer"></div>
+              </div>
+            </div>
+            <p class="compass-hint">转动指针，找到你的专属五行体质</p>
+            <button class="compass-btn" onclick="spinCompass()">
+              <span>开始测算</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-section">
+      <div class="container">
+        <h2 class="section-title">今日推荐</h2>
+        <div class="daily-recommend-grid">
+          <div class="daily-herb-card" id="daily-herb-container">
+            <div class="daily-herb-image">
+              <img id="daily-herb-image" src="" alt="每日一味" />
+            </div>
+            <div class="daily-herb-content">
+              <div class="daily-herb-badge">每日一味</div>
+              <h3 class="daily-herb-name" id="daily-herb-name"></h3>
+              <p class="daily-herb-nature" id="daily-herb-nature"></p>
+              <p class="daily-herb-meridian" id="daily-herb-meridian"></p>
+              <p class="daily-herb-efficacy" id="daily-herb-efficacy"></p>
+              <p class="daily-herb-desc" id="daily-herb-desc"></p>
+              <div class="daily-herb-action">
+                <button class="btn btn-primary" onclick="location.href='material.html'">查看更多药材</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="daily-herb-card daily-prescription-card" id="daily-prescription-card">
+            <div class="daily-herb-content">
+              <div class="daily-herb-badge">每日古方</div>
+              <h3 class="daily-herb-name">梳头发不落方</h3>
+              <p class="daily-herb-nature">出处：明代民间养发古方</p>
+              <p class="daily-herb-meridian">组成：侧柏叶、榧子肉、胡桃肉</p>
+              <p class="daily-herb-efficacy">功效：滋养头皮，固发防脱</p>
+              <p class="daily-herb-desc">适用：头皮干涩、日常掉发、发质干枯</p>
+              <p class="daily-herb-usage">用法：药材研粉擦敷头皮，或煎取药汁梳理发丝</p>
+              <div class="daily-herb-action">
+                <button class="btn btn-primary" onclick="location.href='season-recipe.html#ancient-section'">查看更多古方</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="daily-tip">温馨提示：古方仅供参考，药材使用请遵专业医师指导。</p>
+      </div>
+    </section>
+
+    <section class="news-section">
+      <div class="container">
+        <h2 class="section-title">最近动态</h2>
+        <div class="news-grid">
+          <div class="news-card" onclick="location.href='class.html#article1'">
+            <img src="images/2d6af03616a282093c67a5bdac94050d.jpg" class="news-image">
+            <div class="news-content">
+              <h3 class="news-title">九种体质快速看懂</h3>
+              <p class="news-excerpt">中医体质学说将人体分为九种基本体质类型，了解您的体质是养生的第一步...</p>
+              <div class="news-meta">
+                <span><i class="fas fa-calendar"></i> 2026年1月15日</span>
+                <span><i class="fas fa-eye"></i> 1.2k</span>
+              </div>
+            </div>
+          </div>
+          <div class="news-card" onclick="location.href='class.html#article2'">
+            <img src="images/a0fcac641a7678298a910579997f693e.jpg" class="news-image">
+            <div class="news-content">
+              <h3 class="news-title">四季食疗总原则</h3>
+              <p class="news-excerpt">春生夏长秋收冬藏，顺应四季变化，调整饮食养生策略...</p>
+              <div class="news-meta">
+                <span><i class="fas fa-calendar"></i> 2026年1月10日</span>
+                <span><i class="fas fa-eye"></i> 892</span>
+              </div>
+            </div>
+          </div>
+          <div class="news-card" onclick="location.href='class.html#article3'">
+            <img src="images/80c5297330ea97066cdf5f997228c787.jpg" class="news-image">
+            <div class="news-content">
+              <h3 class="news-title">药食同源是什么？</h3>
+              <p class="news-excerpt">药食同源是中医的重要理念，许多食物同时具有药物的治疗作用...</p>
+              <div class="news-meta">
+                <span><i class="fas fa-calendar"></i> 2026年1月5日</span>
+                <span><i class="fas fa-eye"></i> 1.5k</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="news-more">
+          <a href="class.html" class="btn btn-secondary">
+            <i class="fas fa-newspaper"></i> 查看更多
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">首页</a>
+        <a href="test.html">体质测评</a>
+        <a href="season-recipe.html">四时膳方</a>
+        <a href="material.html">本草图鉴</a>
+        <a href="class.html">中医养生</a>
+      </div>
+      <p class="footer-copyright">© 2026 青禾养生. 传承中医智慧，呵护健康生活</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/material.js"></script>
+  <script src="js/animation.js"></script>
+</body>
+</html>

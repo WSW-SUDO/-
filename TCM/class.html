@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中医养生 - 青禾养生</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <img src="images/logo.png" alt="青禾养生" class="logo-image">
+        </div>
+        <span class="logo-text">青禾养生</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="test.html">体质测评</a></li>
+        <li><a href="season-recipe.html">四时膳方</a></li>
+        <li><a href="material.html">本草图鉴</a></li>
+        <li><a href="class.html" class="active">中医养生</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="carousel-section">
+      <div class="carousel-container">
+        <div class="carousel-wrapper" id="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="images/Camera_1040g34o31l6nip3hkq0g5obgnq4gk4s4l7ah6s0_edit_874666494460286.jpg" alt="养生banner1" class="carousel-image">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/Camera_1040g3k831ede0hj3h0dg5pnainp7e9lt0q0simo_edit_874675695227993.jpg" alt="养生banner2" class="carousel-image">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/Camera_XHS_17811857235821040g2sg31ek0256v0e905pajbtji04l5uij00ng_edit_874671165128514.jpg" alt="养生banner3" class="carousel-image">
+          </div>
+        </div>
+        
+        <div class="carousel-dots" id="carousel-dots">
+          <span class="dot active" onclick="goToSlide(0)"></span>
+          <span class="dot" onclick="goToSlide(1)"></span>
+          <span class="dot" onclick="goToSlide(2)"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 四季顺养 -->
+    <section class="season-health-section">
+      <div class="container">
+        <div class="section-intro">
+          <h2 class="section-title">四季养生·顺天应时</h2>
+          <p class="intro-text">《黄帝内经·素问·四气调神大论》强调：春生养肝、夏长养心、秋收养肺、冬藏养肾。结合中医「五色入五脏」理论，在对应季节食用对应颜色的食材，能更精准地滋养脏腑，让养生效果事半功倍。</p>
+        </div>
+        
+        <!-- 养生总则 -->
+        <div class="health-principles">
+          <div class="principle-item">
+            <span class="principle-num">①</span>
+            <div class="principle-content">
+              <span class="principle-title">春夏养阳，秋冬养阴</span>
+              <p class="principle-desc">顺应四季阴阳消长，春生夏长养阳气，秋收冬藏护阴精。</p>
+            </div>
+          </div>
+          <div class="principle-item">
+            <span class="principle-num">②</span>
+            <div class="principle-content">
+              <span class="principle-title">虚邪贼风，避之有时</span>
+              <p class="principle-desc">避开寒暑燥湿等外邪，及时增减衣物，顺应气候变化。</p>
+            </div>
+          </div>
+          <div class="principle-item">
+            <span class="principle-num">③</span>
+            <div class="principle-content">
+              <span class="principle-title">精神内守，病安从来</span>
+              <p class="principle-desc">保持心态平和，情绪稳定，不妄耗心神，是养生根本。</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="season-grid">
+          <!-- 春：左文右图 -->
+          <div class="season-row row-text-left">
+            <div class="season-text">
+              <h3 class="season-title">🌿 春三月 · 青入肝经</h3>
+              <p class="season-citation">《黄帝内经》：春三月，夜卧早起，广步于庭，被发缓形，以使志生。</p>
+              <p class="season-meta">对应脏腑：肝 / 对应颜色：青</p>
+              <p class="season-desc">春气与肝相应，万物生发，养生核心为「生」，疏肝理气、升发阳气。</p>
+              <div class="season-detail">
+                <h4 class="detail-title">饮食调理</h4>
+                <p class="detail-content">宜多食甘味食材缓肝补脾，清淡温润为宜。推荐食材：菠菜、香椿、荠菜、韭菜、山药、红枣；忌辛辣燥热、生冷寒凉食物，防止肝火旺盛、阳气受损。</p>
+                <h4 class="detail-title">日常习惯</h4>
+                <p class="detail-content">早睡早起，多到户外接触自然；保持情绪平和，戒暴怒、少焦虑，肝气舒畅是春季养生第一要点；日常多梳头，疏通头部经络。</p>
+                <h4 class="detail-title">适宜运动</h4>
+                <p class="detail-content">以舒缓舒展类运动为主，推荐八段锦、散步、瑜伽、拉伸；晨起敲打胆经，大腿外侧左右各50次，帮助升发一身阳气，不宜高强度大汗运动。</p>
+                <h4 class="detail-title">香疗养护</h4>
+                <p class="detail-content">推荐香材：玫瑰花、佛手柑、陈皮、薰衣草。作用：疏肝解郁，舒缓烦躁易怒、胸闷胁胀。使用方式：香薰、随身佩戴香囊。专属香囊配方：玫瑰花+陈皮+佛手。</p>
+              </div>
+            </div>
+            <div class="season-image">
+              <img src="images\Camera_1040g3k031s31tq58ki3g5oinr87417uq5hnog40_edit_992892438374537.jpg" alt="春季养肝">
+            </div>
+          </div>
+          
+          <!-- 夏：左图右文 -->
+          <div class="season-row row-image-left">
+            <div class="season-image">
+              <img src="images\Camera_1040g3k031s31tq58ki4g5oinr87417uqc8lcf2g_edit_992879643549019.jpg" alt="夏季养心">
+            </div>
+            <div class="season-text">
+              <h3 class="season-title">☀️ 夏三月 · 赤入心经</h3>
+              <p class="season-citation">《黄帝内经》：夏三月，夜卧早起，无厌于日，使气得泄，若所爱在外。</p>
+              <p class="season-meta">对应脏腑：心 / 对应颜色：赤</p>
+              <p class="season-desc">夏气与心相应，万物繁茂，养生核心为「长」，清心降火、养心安神。</p>
+              <div class="season-detail">
+                <h4 class="detail-title">饮食调理</h4>
+                <p class="detail-content">宜多食苦味、酸味食材清心敛气，清淡解暑为宜。推荐食材：苦瓜、莲子、绿豆、西瓜、莲藕；忌重油重辣、过量冰饮，防止耗散心气、损伤脾胃。</p>
+                <h4 class="detail-title">日常习惯</h4>
+                <p class="detail-content">晚睡早起，正午午休半小时养心；避免长时间暴晒，室内保持通风，及时祛除湿热浊气。</p>
+                <h4 class="detail-title">适宜运动</h4>
+                <p class="detail-content">选择清晨或傍晚凉爽时段运动，推荐慢跑、游泳、太极；运动微微出汗即可，不可大汗淋漓，防止耗伤心气阴液。</p>
+                <h4 class="detail-title">香疗养护</h4>
+                <p class="detail-content">推荐香材：薄荷、白檀香、杭白菊、艾草。作用：清心除烦、解暑祛湿，改善心烦失眠、头昏闷热。使用方式：室内扩香、香囊悬挂、香材泡脚。专属香囊配方：菊花+薄荷+檀香碎。</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 秋：左文右图 -->
+          <div class="season-row row-text-left">
+            <div class="season-text">
+              <h3 class="season-title">🍂 秋三月 · 白入肺经</h3>
+              <p class="season-citation">《黄帝内经》：秋三月，早卧早起，与鸡俱兴，使志安宁，收敛神气。</p>
+              <p class="season-meta">对应脏腑：肺 / 对应颜色：白</p>
+              <p class="season-desc">秋气与肺相应，万物收敛，养生核心为「收」，润肺生津、收敛肺气。</p>
+              <div class="season-detail">
+                <h4 class="detail-title">饮食调理</h4>
+                <p class="detail-content">宜多食白色、滋阴食材润燥生津。推荐食材：梨、百合、银耳、莲藕、杏仁；忌辛辣烧烤、油炸食物，防止加重秋燥、耗伤肺阴。</p>
+                <h4 class="detail-title">日常习惯</h4>
+                <p class="detail-content">早睡早起，顺应收敛之气；天干物燥及时补充水分；早晚温差大，及时添衣，重点护住口鼻与肺部。</p>
+                <h4 class="detail-title">适宜运动</h4>
+                <p class="detail-content">推荐快走、登山、太极拳、腹式呼吸；多做扩胸运动，锻炼肺功能；运动量循序渐进，避免剧烈出汗。</p>
+                <h4 class="detail-title">香疗养护</h4>
+                <p class="detail-content">推荐香材：桂花、干百合、玉竹、甜杏仁。作用：润肺生津，缓解咽喉干痒、干咳、口鼻干燥。使用方式：香薰慢熏、随身佩戴香囊、蒸汽润鼻。专属香囊配方：干百合+桂花+杏仁。</p>
+              </div>
+            </div>
+            <div class="season-image">
+              <img src="images\Camera_1040g3k031s31tq58ki1g5oinr87417uq27j6dvg_edit_992829625803714.jpg" alt="秋季养肺">
+            </div>
+          </div>
+          
+          <!-- 冬：左图右文 -->
+          <div class="season-row row-image-left">
+            <div class="season-image">
+              <img src="images\Camera_1040g3k031s31tq58ki5g5oinr87417uqorh2hd8_edit_992860636561522.jpg" alt="冬季补肾">
+            </div>
+            <div class="season-text">
+              <h3 class="season-title">❄️ 冬三月 · 黑入肾经</h3>
+              <p class="season-citation">《黄帝内经》：冬三月，此谓闭藏，水冰地坼，无扰乎阳，早卧晚起，必待日光。</p>
+              <p class="season-meta">对应脏腑：肾 / 对应颜色：黑</p>
+              <p class="season-desc">冬气与肾相应，万物闭藏，养生核心为「藏」，温补肾阳、固守精气。</p>
+              <div class="season-detail">
+                <h4 class="detail-title">饮食调理</h4>
+                <p class="detail-content">宜多食辛温、黑色食材温润养阳。推荐食材：羊肉、黑芝麻、核桃、黑豆、板栗；忌生冷寒凉、冰镇食物，防止损伤肾阳。</p>
+                <h4 class="detail-title">日常习惯</h4>
+                <p class="detail-content">早睡晚起，等待日出后再外出；注重全身保暖，尤其护住腰腹、双脚；减少熬夜，藏住体内精气。</p>
+                <h4 class="detail-title">适宜运动</h4>
+                <p class="detail-content">以室内温和运动为主，推荐室内瑜伽、八段锦、原地踏步；睡前搓揉涌泉穴，平日搓热后腰肾区；冬季运动切忌大汗，出汗后及时穿衣防风。</p>
+                <h4 class="detail-title">香疗养护</h4>
+                <p class="detail-content">推荐香材：沉香、肉桂、丁香、生姜干。作用：温阳散寒、暖肾固本，改善畏寒怕冷、手脚冰凉。使用方式：夜间卧室香薰、贴身佩戴暖身香囊、泡澡入香。专属香囊配方：沉香+肉桂+丁香。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 经络自查与养护 -->
+        <div class="meridian-section">
+          <h3 class="meridian-title">经络不通自查信号</h3>
+          <div class="meridian-grid">
+            <div class="meridian-item">
+              <span class="meridian-name">肝经不通</span>
+              <p class="meridian-sign">胁肋胀痛、易怒、眼干、月经不调</p>
+            </div>
+            <div class="meridian-item">
+              <span class="meridian-name">脾经不通</span>
+              <p class="meridian-sign">腹胀纳差、大便稀溏、身体沉重、面色发黄</p>
+            </div>
+            <div class="meridian-item">
+              <span class="meridian-name">肾经不通</span>
+              <p class="meridian-sign">腰膝酸软、畏寒脱发、耳鸣、夜尿频繁</p>
+            </div>
+          </div>
+          
+          <h3 class="meridian-title">日常经络养护</h3>
+          <div class="meridian-care">
+            <p class="care-text">推肝经：每晚沿大腿内侧从上向下推，左右各50次</p>
+            <p class="care-text">拍打脾经：沿小腿内侧拍打，健脾祛湿</p>
+            <p class="care-text">肾经养护：睡前搓热后腰与脚底涌泉穴</p>
+          </div>
+          
+          <h3 class="meridian-title">常用保健穴位</h3>
+          <div class="acupoint-grid">
+            <div class="acupoint-item">
+              <span class="acupoint-name">三阴交</span>
+              <p class="acupoint-desc">调理肝脾肾，每日按压3-5分钟</p>
+            </div>
+            <div class="acupoint-item">
+              <span class="acupoint-name">足三里</span>
+              <p class="acupoint-desc">健脾强身，每日按压10分钟</p>
+            </div>
+            <div class="acupoint-item">
+              <span class="acupoint-name">太冲穴</span>
+              <p class="acupoint-desc">疏肝解郁，每日按压3分钟</p>
+            </div>
+            <div class="acupoint-item">
+              <span class="acupoint-name">涌泉穴</span>
+              <p class="acupoint-desc">补肾助眠，睡前揉搓100次</p>
+            </div>
+            <div class="acupoint-item">
+              <span class="acupoint-name">合谷穴</span>
+              <p class="acupoint-desc">行气止痛，头痛牙痛可随时按压3分钟</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="section-footer">
+          <p class="footer-text">顺时节调养起居饮食，长久坚持，身体自会回馈最好的状态。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 课程分类导航 -->
+    <div class="class-section">
+      <div class="container">
+        <div class="class-header">
+          <h2 class="section-title">中医养生</h2>
+          <p class="desc-text" style="margin-bottom: 40px;">系统学习中医养生知识，开启健康生活之旅</p>
+        </div>
+
+        <!-- 课程列表 -->
+        <div class="course-list">
+          <!-- 课程1 -->
+          <div class="course-card">
+            <div class="course-cover">
+              <img src="https://i1.hdslb.com/bfs/archive/744ec03e20a82af0f3a11ef438148eb5babc9a69.jpg" alt="中医望闻问切入门" class="course-image">
+              <div class="course-duration">18:25</div>
+              <div class="course-play-overlay" onclick="playVideo('video1')">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <div class="course-details">
+              <div class="course-badge">中医诊断</div>
+              <h3 class="course-title">中医望闻问切入门</h3>
+              <p class="course-desc">系统学习中医四诊法，掌握望气色、听声音、问症状、切脉象的基本方法。</p>
+              <div class="course-meta">
+                <span><i class="fas fa-user-circle"></i> 陈医师</span>
+                <span><i class="fas fa-eye"></i> 2.3万次观看</span>
+                <span><i class="fas fa-star"></i> 4.9分</span>
+              </div>
+              <div class="course-tags">
+                <span class="tag">四诊法</span>
+                <span class="tag">脉诊</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 课程2 -->
+          <div class="course-card">
+            <div class="course-cover">
+              <img src="https://i0.hdslb.com/bfs/archive/8a95f8bd65848d080afd220d5fede4616f576889.jpg" alt="十二经络详解" class="course-image">
+              <div class="course-duration">22:40</div>
+              <div class="course-play-overlay" onclick="playVideo('video2')">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <div class="course-details">
+              <div class="course-badge">经络养生</div>
+              <h3 class="course-title">十二经络详解与养生</h3>
+              <p class="course-desc">深入了解人体十二经络的走向、穴位分布和养生功效。</p>
+              <div class="course-meta">
+                <span><i class="fas fa-user-circle"></i> 刘医师</span>
+                <span><i class="fas fa-eye"></i> 1.8万次观看</span>
+                <span><i class="fas fa-star"></i> 4.8分</span>
+              </div>
+              <div class="course-tags">
+                <span class="tag">经络理论</span>
+                <span class="tag">穴位保健</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 课程3 -->
+          <div class="course-card">
+            <div class="course-cover">
+              <img src="https://i1.hdslb.com/bfs/archive/33bae70e324051cb59a3789a177612554d133aff.jpg" alt="七情与健康" class="course-image">
+              <div class="course-duration">15:30</div>
+              <div class="course-play-overlay" onclick="playVideo('video3')">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <div class="course-details">
+              <div class="course-badge">情志调养</div>
+              <h3 class="course-title">七情与五脏的关系</h3>
+              <p class="course-desc">了解中医七情与五脏的对应关系，学会通过调节情绪保养脏腑健康。</p>
+              <div class="course-meta">
+                <span><i class="fas fa-user-circle"></i> 周医师</span>
+                <span><i class="fas fa-eye"></i> 1.5万次观看</span>
+                <span><i class="fas fa-star"></i> 5.0分</span>
+              </div>
+              <div class="course-tags">
+                <span class="tag">情绪管理</span>
+                <span class="tag">心理养生</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 课程4 -->
+          <div class="course-card">
+            <div class="course-cover">
+              <img src="https://i1.hdslb.com/bfs/archive/ce4d4cd0d178a9eaf579c312ff98c9d7bd92e067.jpg" alt="舌诊入门" class="course-image">
+              <div class="course-duration">14:15</div>
+              <div class="course-play-overlay" onclick="playVideo('video4')">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <div class="course-details">
+              <div class="course-badge">中医诊断</div>
+              <h3 class="course-title">舌诊快速入门</h3>
+              <p class="course-desc">通过观察舌头的颜色、形态、舌苔来判断身体状况的简单方法。</p>
+              <div class="course-meta">
+                <span><i class="fas fa-user-circle"></i> 赵医师</span>
+                <span><i class="fas fa-eye"></i> 3.1万次观看</span>
+                <span><i class="fas fa-star"></i> 4.9分</span>
+              </div>
+              <div class="course-tags">
+                <span class="tag">舌诊</span>
+                <span class="tag">自我诊断</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 视频播放弹窗 -->
+    <div class="video-modal" id="video-modal" onclick="closeVideo()">
+      <div class="video-modal-content" onclick="event.stopPropagation()">
+        <span class="video-modal-close" onclick="closeVideo()">&times;</span>
+        <div class="video-player-container">
+          <iframe id="video-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="video-modal-title" id="video-modal-title">视频标题</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">首页</a>
+        <a href="test.html">体质测评</a>
+        <a href="season-recipe.html">四时膳方</a>
+        <a href="material.html">本草图鉴</a>
+        <a href="class.html">中医养生</a>
+      </div>
+      <p class="footer-copyright">© 2026 青禾养生. 传承中医智慧，呵护健康生活</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animation.js"></script>
+</body>
+</html>

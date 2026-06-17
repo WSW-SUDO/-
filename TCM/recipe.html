@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>养生食谱 - 青禾养生</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <img src="images/logo.png" alt="青禾养生" class="logo-image">
+        </div>
+        <span class="logo-text">青禾养生</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="test.html">体质测试</a></li>
+        <li><a href="recipe.html" class="active">养生食谱</a></li>
+        <li><a href="about.html">关于我们</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2 class="section-title">养生食谱</h2>
+      <p style="text-align: center; color: #666; margin-bottom: 30px;">根据体质选择适合您的养生美食</p>
+      
+      <div style="text-align: center; margin-bottom: 30px;">
+        <select id="filter-select" class="btn btn-secondary" onchange="filterRecipes()" style="border: none; cursor: pointer;">
+          <option value="all">全部食谱</option>
+          <option value="平和">平和体质</option>
+          <option value="阳虚">阳虚体质</option>
+          <option value="阴虚">阴虚体质</option>
+          <option value="痰湿">痰湿体质</option>
+        </select>
+      </div>
+
+      <div class="recipe-grid" id="recipe-container">
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">首页</a>
+        <a href="test.html">体质测试</a>
+        <a href="recipe.html">养生食谱</a>
+        <a href="about.html">关于我们</a>
+      </div>
+      <p class="footer-copyright">© 2026 青禾养生. 传承中医智慧，呵护健康生活</p>
+    </div>
+  </footer>
+
+  <script src="js/recipe.js"></script>
+  <script src="js/animation.js"></script>
+</body>
+</html>

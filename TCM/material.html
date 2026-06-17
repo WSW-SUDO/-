@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>本草图鉴 - 青禾养生</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <img src="images/logo.png" alt="青禾养生" class="logo-image">
+        </div>
+        <span class="logo-text">青禾养生</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="test.html">体质测评</a></li>
+        <li><a href="season-recipe.html">四时膳方</a></li>
+        <li><a href="material.html" class="active">本草图鉴</a></li>
+        <li><a href="class.html">中医养生</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2 class="section-title">本草图鉴</h2>
+      <p class="desc-text" style="margin-bottom: 40px;">探索药食同源的神奇食材，了解它们的性味与功效</p>
+      
+      <div id="material-container" class="material-grid"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">首页</a>
+        <a href="test.html">体质测评</a>
+        <a href="season-recipe.html">四时膳方</a>
+        <a href="material.html">本草图鉴</a>
+        <a href="class.html">中医养生</a>
+      </div>
+      <p class="footer-copyright">© 2026 青禾养生. 传承中医智慧，呵护健康生活</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/material.js"></script>
+  <script src="js/animation.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>当季药膳 - 青禾养生</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <img src="images/logo.png" alt="青禾养生" class="logo-image">
+        </div>
+        <span class="logo-text">青禾养生</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="test.html">体质测评</a></li>
+        <li><a href="season-recipe.html" class="active">四时膳方</a></li>
+        <li><a href="material.html">本草图鉴</a></li>
+        <li><a href="class.html">中医养生</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2 class="section-title">四时膳方</h2>
+      <p class="desc-text" style="margin-bottom: 30px;">根据四季变化，为您推荐应季养生食谱</p>
+      
+      <div class="filter-bar">
+        <div class="season-tabs">
+          <button class="season-tab active">春食养肝</button>
+          <button class="season-tab">夏食清暑</button>
+          <button class="season-tab">秋食润燥</button>
+          <button class="season-tab">冬食温补</button>
+        </div>
+        
+        <div class="category-filter">
+          <label for="category-filter">筛选品类：</label>
+          <select id="category-filter">
+            <option value="all">全部品类</option>
+            <option value="滋补汤羹">滋补汤羹</option>
+            <option value="养生粥品">养生粥品</option>
+            <option value="糖水茶饮">糖水茶饮</option>
+            <option value="时令小点">时令小点</option>
+            <option value="佐餐佳肴">佐餐佳肴</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="recipe-container" class="recipe-grid"></div>
+    
+    <!-- 四季时令古方板块 -->
+    <div class="ancient-prescription-section" id="ancient-section">
+      <div class="section-divider"></div>
+      <div class="ancient-header">
+        <button class="ancient-nav-btn ancient-prev" onclick="prevSeason()" aria-label="上一季">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h3 class="ancient-title" id="ancient-title">春季专属时令古方</h3>
+        <button class="ancient-nav-btn ancient-next" onclick="nextSeason()" aria-label="下一季">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+      <div id="ancient-container" class="ancient-grid"></div>
+      <p class="safety-note">古方涉及药材炮制，无专业中医知识请勿盲目自行操作</p>
+    </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">首页</a>
+        <a href="test.html">体质测评</a>
+        <a href="season-recipe.html">四时膳方</a>
+        <a href="material.html">本草图鉴</a>
+        <a href="class.html">中医养生</a>
+      </div>
+      <p class="footer-copyright">© 2026 青禾养生. 传承中医智慧，呵护健康生活</p>
+    </div>
+  </footer>
+
+  <script src="js/recipe.js"></script>
+  <script src="js/animation.js"></script>
+</body>
+</html>
